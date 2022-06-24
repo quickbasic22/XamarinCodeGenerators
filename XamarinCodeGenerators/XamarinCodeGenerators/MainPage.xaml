@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:xamarincodegenerators="clr-namespace:XamarinCodeGenerators" 
+             x:DataType="xamarincodegenerators:MainViewModel"
+             x:Class="XamarinCodeGenerators.MainPage"
+             Title="XAML Code Generators">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label x:Name="TitleLbl" Text="XAML Code Generators" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label x:Name="NameLbl" Text="{Binding Name}" FontSize="Title" Padding="30,10,30,10"/>
+        <Label x:Name="BirthdateLbl" Text="{Binding Birthdate}" FontSize="16" Padding="30,0,30,0"/>
+        <Button Text="Calculate Age" Command="{Binding CalculateAgeCommand}" CommandParameter="{Binding Source={x:Reference NameLbl}}"/>
+
+    </StackLayout>
+
+</ContentPage>
